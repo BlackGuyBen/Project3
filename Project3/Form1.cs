@@ -18,7 +18,9 @@ namespace Project3
             selectionTab.Hide();
             newResTab.Hide();
             resSearchTab.Hide();
-
+            scholarshipTab.Hide();
+            athleteTab.Hide();
+            workerTab.Hide();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -47,7 +49,13 @@ namespace Project3
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
-
+            InitializeComponent();
+            selectionTab.Hide();
+            newResTab.Hide();
+            resSearchTab.Hide();
+            scholarshipTab.Hide();
+            athleteTab.Hide();
+            workerTab.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -71,6 +79,23 @@ namespace Project3
         private void newRes_Click(object sender, EventArgs e)
         {
             newResTab.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (scholarship.Checked == true)
+            {
+                scholarshipTab.Show();
+                //scholarshipTab();
+            }
+            if (athlete.Checked == true)
+            {
+                athleteTab.Show();
+            }
+            else if (worker.Checked == true)
+            {
+                workerTab.Show();
+            }
         }
     }
 }

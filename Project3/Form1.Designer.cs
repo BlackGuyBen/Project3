@@ -36,6 +36,7 @@
             this.idLabel = new System.Windows.Forms.Label();
             this.idText = new System.Windows.Forms.TextBox();
             this.newResTab = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.athlete = new System.Windows.Forms.RadioButton();
             this.worker = new System.Windows.Forms.RadioButton();
@@ -51,10 +52,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabs = new System.Windows.Forms.TabControl();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.scholarshipTab = new System.Windows.Forms.TabPage();
+            this.athleteTab = new System.Windows.Forms.TabPage();
+            this.workerTab = new System.Windows.Forms.TabPage();
             this.resSearchTab.SuspendLayout();
             this.newResTab.SuspendLayout();
             this.selectionTab.SuspendLayout();
@@ -105,7 +105,7 @@
             this.resSearchTab.Margin = new System.Windows.Forms.Padding(2);
             this.resSearchTab.Name = "resSearchTab";
             this.resSearchTab.Padding = new System.Windows.Forms.Padding(2);
-            this.resSearchTab.Size = new System.Drawing.Size(506, 431);
+            this.resSearchTab.Size = new System.Drawing.Size(706, 431);
             this.resSearchTab.TabIndex = 3;
             this.resSearchTab.Text = "Residence Search";
             this.resSearchTab.UseVisualStyleBackColor = true;
@@ -113,16 +113,16 @@
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(168, 63);
+            this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel.Location = new System.Drawing.Point(273, 52);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(172, 16);
+            this.idLabel.Size = new System.Drawing.Size(208, 20);
             this.idLabel.TabIndex = 1;
             this.idLabel.Text = "Enter student ID number";
             // 
             // idText
             // 
-            this.idText.Location = new System.Drawing.Point(202, 96);
+            this.idText.Location = new System.Drawing.Point(332, 115);
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(100, 20);
             this.idText.TabIndex = 0;
@@ -131,10 +131,7 @@
             // newResTab
             // 
             this.newResTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newResTab.BackgroundImage")));
-            this.newResTab.Controls.Add(this.textBox3);
-            this.newResTab.Controls.Add(this.label7);
-            this.newResTab.Controls.Add(this.label6);
-            this.newResTab.Controls.Add(this.label5);
+            this.newResTab.Controls.Add(this.button1);
             this.newResTab.Controls.Add(this.label4);
             this.newResTab.Controls.Add(this.athlete);
             this.newResTab.Controls.Add(this.worker);
@@ -143,17 +140,28 @@
             this.newResTab.Margin = new System.Windows.Forms.Padding(2);
             this.newResTab.Name = "newResTab";
             this.newResTab.Padding = new System.Windows.Forms.Padding(2);
-            this.newResTab.Size = new System.Drawing.Size(506, 431);
+            this.newResTab.Size = new System.Drawing.Size(706, 431);
             this.newResTab.TabIndex = 2;
             this.newResTab.Text = "New Residence";
             this.newResTab.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(341, 174);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Go";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 26);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(234, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 13);
+            this.label4.Size = new System.Drawing.Size(239, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Select the type of residence:";
             // 
@@ -161,11 +169,10 @@
             // 
             this.athlete.AutoSize = true;
             this.athlete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.athlete.Location = new System.Drawing.Point(211, 86);
+            this.athlete.Location = new System.Drawing.Point(298, 89);
             this.athlete.Name = "athlete";
             this.athlete.Size = new System.Drawing.Size(130, 20);
             this.athlete.TabIndex = 2;
-            this.athlete.TabStop = true;
             this.athlete.Text = "Student Athlete";
             this.athlete.UseVisualStyleBackColor = true;
             // 
@@ -173,19 +180,19 @@
             // 
             this.worker.AutoSize = true;
             this.worker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.worker.Location = new System.Drawing.Point(357, 86);
+            this.worker.Location = new System.Drawing.Point(444, 89);
             this.worker.Name = "worker";
             this.worker.Size = new System.Drawing.Size(132, 20);
             this.worker.TabIndex = 1;
-            this.worker.TabStop = true;
             this.worker.Text = "Student Worker";
             this.worker.UseVisualStyleBackColor = true;
             // 
             // scholarship
             // 
             this.scholarship.AutoSize = true;
+            this.scholarship.Checked = true;
             this.scholarship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scholarship.Location = new System.Drawing.Point(27, 86);
+            this.scholarship.Location = new System.Drawing.Point(114, 89);
             this.scholarship.Name = "scholarship";
             this.scholarship.Size = new System.Drawing.Size(178, 20);
             this.scholarship.TabIndex = 0;
@@ -315,47 +322,49 @@
             this.tabs.Controls.Add(this.selectionTab);
             this.tabs.Controls.Add(this.newResTab);
             this.tabs.Controls.Add(this.resSearchTab);
-            this.tabs.Location = new System.Drawing.Point(174, 10);
+            this.tabs.Controls.Add(this.scholarshipTab);
+            this.tabs.Controls.Add(this.athleteTab);
+            this.tabs.Controls.Add(this.workerTab);
+            this.tabs.Location = new System.Drawing.Point(192, 11);
             this.tabs.Margin = new System.Windows.Forms.Padding(2);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(514, 457);
+            this.tabs.Size = new System.Drawing.Size(714, 457);
             this.tabs.TabIndex = 2;
             this.tabs.Tag = "";
             // 
-            // label5
+            // scholarshipTab
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(168, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Boarding Fee";
+            this.scholarshipTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scholarshipTab.BackgroundImage")));
+            this.scholarshipTab.Location = new System.Drawing.Point(4, 22);
+            this.scholarshipTab.Name = "scholarshipTab";
+            this.scholarshipTab.Padding = new System.Windows.Forms.Padding(3);
+            this.scholarshipTab.Size = new System.Drawing.Size(506, 431);
+            this.scholarshipTab.TabIndex = 4;
+            this.scholarshipTab.Text = "New Scholarship";
+            this.scholarshipTab.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // athleteTab
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(277, 152);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "S";
+            this.athleteTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("athleteTab.BackgroundImage")));
+            this.athleteTab.Location = new System.Drawing.Point(4, 22);
+            this.athleteTab.Name = "athleteTab";
+            this.athleteTab.Padding = new System.Windows.Forms.Padding(3);
+            this.athleteTab.Size = new System.Drawing.Size(506, 431);
+            this.athleteTab.TabIndex = 5;
+            this.athleteTab.Text = "New Student Athlete";
+            this.athleteTab.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // workerTab
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(140, 193);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Student ID Number";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(280, 193);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.workerTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("workerTab.BackgroundImage")));
+            this.workerTab.Location = new System.Drawing.Point(4, 22);
+            this.workerTab.Name = "workerTab";
+            this.workerTab.Padding = new System.Windows.Forms.Padding(3);
+            this.workerTab.Size = new System.Drawing.Size(506, 431);
+            this.workerTab.TabIndex = 6;
+            this.workerTab.Text = "New Student Worker";
+            this.workerTab.UseVisualStyleBackColor = true;
             // 
             // mainWindow
             // 
@@ -363,7 +372,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(698, 477);
+            this.ClientSize = new System.Drawing.Size(917, 477);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dunLab2);
             this.Controls.Add(this.dunLabel1);
@@ -409,10 +418,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabs;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage scholarshipTab;
+        private System.Windows.Forms.TabPage athleteTab;
+        private System.Windows.Forms.TabPage workerTab;
     }
 }
 
