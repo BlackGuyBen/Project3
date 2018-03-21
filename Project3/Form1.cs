@@ -15,18 +15,22 @@ namespace Project3
         public mainWindow()
         {
             InitializeComponent();
+            selectionTab.Hide();
+            newResTab.Hide();
+            resSearchTab.Hide();
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (sender == "home")
+            if (textBox1.Text == "home")
             {
-
+                textBox2.Enabled = true;
             }
         }
 
@@ -35,10 +39,10 @@ namespace Project3
 
         }
 
-        //called when the button is clicked
+        ///called when the button is clicked
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
+            selectionTab.Show();
         }
 
         private void mainWindow_Load(object sender, EventArgs e)
@@ -48,12 +52,25 @@ namespace Project3
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            resSearchTab.Show();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "1234")
+            {
+                loginButton.Enabled = true;
+            }
+        }
+
+        private void newRes_Click(object sender, EventArgs e)
+        {
+            newResTab.Show();
         }
     }
 }
