@@ -54,16 +54,15 @@ namespace Project3
         }
 
 
-
-
         //Clicking new Resident button or Find Resident button
         private void newRes_Click(object sender, EventArgs e)
         {
             tabs.TabPages.Add(newResTab);
             //newResTab.Click = true;     
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        // Options for when choosing the kind of student being added to the residence
+        private void go_Click(object sender, EventArgs e)
         {
             if (scholarship.Checked == true)
             {
@@ -81,18 +80,9 @@ namespace Project3
         }
 
 
-
         private void findRes_Click(object sender, EventArgs e)
         {
             tabs.TabPages.Add(resSearchTab);
-        }
-
-
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            resSearchTab.Show();
         }
 
 

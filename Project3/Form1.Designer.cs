@@ -46,6 +46,7 @@
             this.findRes = new System.Windows.Forms.Button();
             this.newRes = new System.Windows.Forms.Button();
             this.menuTab = new System.Windows.Forms.TabPage();
+            this.welcome = new System.Windows.Forms.Label();
             this.login = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
@@ -54,14 +55,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabs = new System.Windows.Forms.TabControl();
             this.scholarshipTab = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.athleteTab = new System.Windows.Forms.TabPage();
             this.workerTab = new System.Windows.Forms.TabPage();
-            this.welcome = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.resSearchTab.SuspendLayout();
             this.newResTab.SuspendLayout();
             this.selectionTab.SuspendLayout();
             this.menuTab.SuspendLayout();
             this.tabs.SuspendLayout();
+            this.scholarshipTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // dunLabel1
@@ -125,6 +131,7 @@
             // idText
             // 
             this.idText.Location = new System.Drawing.Point(332, 115);
+            this.idText.MaxLength = 6;
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(100, 20);
             this.idText.TabIndex = 0;
@@ -133,6 +140,7 @@
             // newResTab
             // 
             this.newResTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newResTab.BackgroundImage")));
+            this.newResTab.Controls.Add(this.button1);
             this.newResTab.Controls.Add(this.goButton);
             this.newResTab.Controls.Add(this.label4);
             this.newResTab.Controls.Add(this.athlete);
@@ -156,7 +164,7 @@
             this.goButton.TabIndex = 4;
             this.goButton.Text = "Go";
             this.goButton.UseVisualStyleBackColor = true;
-            this.goButton.Click += new System.EventHandler(this.button1_Click);
+            this.goButton.Click += new System.EventHandler(this.go_Click);
             // 
             // label4
             // 
@@ -268,6 +276,16 @@
             this.menuTab.Text = "Main Menu";
             this.menuTab.UseVisualStyleBackColor = true;
             // 
+            // welcome
+            // 
+            this.welcome.AutoSize = true;
+            this.welcome.Location = new System.Drawing.Point(309, 123);
+            this.welcome.Name = "welcome";
+            this.welcome.Size = new System.Drawing.Size(183, 16);
+            this.welcome.TabIndex = 6;
+            this.welcome.Text = "Welcome Resident Director!";
+            this.welcome.Visible = false;
+            // 
             // login
             // 
             this.login.Enabled = false;
@@ -350,6 +368,10 @@
             // scholarshipTab
             // 
             this.scholarshipTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scholarshipTab.BackgroundImage")));
+            this.scholarshipTab.Controls.Add(this.radioButton3);
+            this.scholarshipTab.Controls.Add(this.radioButton1);
+            this.scholarshipTab.Controls.Add(this.label7);
+            this.scholarshipTab.Controls.Add(this.label6);
             this.scholarshipTab.Location = new System.Drawing.Point(4, 22);
             this.scholarshipTab.Name = "scholarshipTab";
             this.scholarshipTab.Padding = new System.Windows.Forms.Padding(3);
@@ -357,6 +379,16 @@
             this.scholarshipTab.TabIndex = 4;
             this.scholarshipTab.Text = "New Scholarship";
             this.scholarshipTab.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(126, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(199, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Monthly Boarding Fee: $100";
             // 
             // athleteTab
             // 
@@ -380,15 +412,49 @@
             this.workerTab.Text = "New Student Worker";
             this.workerTab.UseVisualStyleBackColor = true;
             // 
-            // welcome
+            // label7
             // 
-            this.welcome.AutoSize = true;
-            this.welcome.Location = new System.Drawing.Point(309, 123);
-            this.welcome.Name = "welcome";
-            this.welcome.Size = new System.Drawing.Size(183, 16);
-            this.welcome.TabIndex = 6;
-            this.welcome.Text = "Welcome Resident Director!";
-            this.welcome.Visible = false;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(126, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 16);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Please select a floor:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(322, 119);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(64, 17);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Floor 7";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(322, 158);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(64, 17);
+            this.radioButton3.TabIndex = 4;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Floor 8";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(479, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(196, 43);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Return to Selection";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // mainWindow
             // 
@@ -415,6 +481,8 @@
             this.menuTab.ResumeLayout(false);
             this.menuTab.PerformLayout();
             this.tabs.ResumeLayout(false);
+            this.scholarshipTab.ResumeLayout(false);
+            this.scholarshipTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,6 +517,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Label welcome;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label7;
     }
 }
 
