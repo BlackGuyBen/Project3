@@ -64,12 +64,36 @@
             this.workerTab = new System.Windows.Forms.TabPage();
             this.return2 = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.goScholarship = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.idScholarship = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.idAthlete = new System.Windows.Forms.Label();
+            this.athletefee = new System.Windows.Forms.Label();
+            this.workerFee = new System.Windows.Forms.Label();
+            this.idWorker = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.goAthlete = new System.Windows.Forms.Button();
+            this.goWorker = new System.Windows.Forms.Button();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.resReturn1 = new System.Windows.Forms.Button();
+            this.resReturn2 = new System.Windows.Forms.Button();
+            this.resReturn3 = new System.Windows.Forms.Button();
             this.resSearchTab.SuspendLayout();
             this.newResTab.SuspendLayout();
             this.selectionTab.SuspendLayout();
             this.menuTab.SuspendLayout();
             this.tabs.SuspendLayout();
             this.scholarshipTab.SuspendLayout();
+            this.athleteTab.SuspendLayout();
+            this.workerTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // dunLabel1
@@ -382,6 +406,10 @@
             // scholarshipTab
             // 
             this.scholarshipTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scholarshipTab.BackgroundImage")));
+            this.scholarshipTab.Controls.Add(this.resReturn1);
+            this.scholarshipTab.Controls.Add(this.idScholarship);
+            this.scholarshipTab.Controls.Add(this.label8);
+            this.scholarshipTab.Controls.Add(this.goScholarship);
             this.scholarshipTab.Controls.Add(this.radioButton3);
             this.scholarshipTab.Controls.Add(this.radioButton1);
             this.scholarshipTab.Controls.Add(this.label7);
@@ -405,6 +433,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Floor 8";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -417,6 +446,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Floor 7";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label7
             // 
@@ -441,6 +471,15 @@
             // athleteTab
             // 
             this.athleteTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("athleteTab.BackgroundImage")));
+            this.athleteTab.Controls.Add(this.resReturn2);
+            this.athleteTab.Controls.Add(this.goAthlete);
+            this.athleteTab.Controls.Add(this.radioButton5);
+            this.athleteTab.Controls.Add(this.radioButton2);
+            this.athleteTab.Controls.Add(this.radioButton4);
+            this.athleteTab.Controls.Add(this.label9);
+            this.athleteTab.Controls.Add(this.athletefee);
+            this.athleteTab.Controls.Add(this.textBox1);
+            this.athleteTab.Controls.Add(this.idAthlete);
             this.athleteTab.Location = new System.Drawing.Point(4, 22);
             this.athleteTab.Name = "athleteTab";
             this.athleteTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
@@ -452,6 +491,15 @@
             // workerTab
             // 
             this.workerTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("workerTab.BackgroundImage")));
+            this.workerTab.Controls.Add(this.resReturn3);
+            this.workerTab.Controls.Add(this.radioButton6);
+            this.workerTab.Controls.Add(this.radioButton7);
+            this.workerTab.Controls.Add(this.radioButton8);
+            this.workerTab.Controls.Add(this.label11);
+            this.workerTab.Controls.Add(this.goWorker);
+            this.workerTab.Controls.Add(this.workerFee);
+            this.workerTab.Controls.Add(this.idWorker);
+            this.workerTab.Controls.Add(this.label10);
             this.workerTab.Location = new System.Drawing.Point(4, 22);
             this.workerTab.Name = "workerTab";
             this.workerTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
@@ -483,6 +531,242 @@
             this.logoutButton.Visible = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // goScholarship
+            // 
+            this.goScholarship.Enabled = false;
+            this.goScholarship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goScholarship.Location = new System.Drawing.Point(295, 234);
+            this.goScholarship.Name = "goScholarship";
+            this.goScholarship.Size = new System.Drawing.Size(75, 23);
+            this.goScholarship.TabIndex = 5;
+            this.goScholarship.Text = "Go";
+            this.goScholarship.UseVisualStyleBackColor = true;
+            this.goScholarship.Click += new System.EventHandler(this.goScholarship_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(126, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(141, 16);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Student ID Number:";
+            // 
+            // idScholarship
+            // 
+            this.idScholarship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idScholarship.Location = new System.Drawing.Point(322, 49);
+            this.idScholarship.MaxLength = 8;
+            this.idScholarship.Name = "idScholarship";
+            this.idScholarship.Size = new System.Drawing.Size(100, 22);
+            this.idScholarship.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(361, 75);
+            this.textBox1.MaxLength = 8;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 9;
+            // 
+            // idAthlete
+            // 
+            this.idAthlete.AutoSize = true;
+            this.idAthlete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idAthlete.Location = new System.Drawing.Point(165, 75);
+            this.idAthlete.Name = "idAthlete";
+            this.idAthlete.Size = new System.Drawing.Size(141, 16);
+            this.idAthlete.TabIndex = 8;
+            this.idAthlete.Text = "Student ID Number:";
+            // 
+            // athletefee
+            // 
+            this.athletefee.AutoSize = true;
+            this.athletefee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.athletefee.Location = new System.Drawing.Point(165, 112);
+            this.athletefee.Name = "athletefee";
+            this.athletefee.Size = new System.Drawing.Size(207, 16);
+            this.athletefee.TabIndex = 10;
+            this.athletefee.Text = "Monthly Boarding Fee: $1200";
+            // 
+            // workerFee
+            // 
+            this.workerFee.AutoSize = true;
+            this.workerFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workerFee.Location = new System.Drawing.Point(177, 99);
+            this.workerFee.Name = "workerFee";
+            this.workerFee.Size = new System.Drawing.Size(207, 16);
+            this.workerFee.TabIndex = 13;
+            this.workerFee.Text = "Monthly Boarding Fee: $1245";
+            // 
+            // idWorker
+            // 
+            this.idWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idWorker.Location = new System.Drawing.Point(373, 62);
+            this.idWorker.MaxLength = 8;
+            this.idWorker.Name = "idWorker";
+            this.idWorker.Size = new System.Drawing.Size(100, 22);
+            this.idWorker.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(177, 62);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(141, 16);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Student ID Number:";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(361, 198);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(64, 17);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Floor 5";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.Location = new System.Drawing.Point(361, 159);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(64, 17);
+            this.radioButton4.TabIndex = 12;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Floor 4";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(165, 159);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(155, 16);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Please select a floor:";
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.Location = new System.Drawing.Point(361, 235);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(64, 17);
+            this.radioButton5.TabIndex = 14;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Floor 6";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // goAthlete
+            // 
+            this.goAthlete.Enabled = false;
+            this.goAthlete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goAthlete.Location = new System.Drawing.Point(316, 296);
+            this.goAthlete.Name = "goAthlete";
+            this.goAthlete.Size = new System.Drawing.Size(75, 23);
+            this.goAthlete.TabIndex = 15;
+            this.goAthlete.Text = "Go";
+            this.goAthlete.UseVisualStyleBackColor = true;
+            // 
+            // goWorker
+            // 
+            this.goWorker.Enabled = false;
+            this.goWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goWorker.Location = new System.Drawing.Point(309, 279);
+            this.goWorker.Name = "goWorker";
+            this.goWorker.Size = new System.Drawing.Size(75, 23);
+            this.goWorker.TabIndex = 14;
+            this.goWorker.Text = "Go";
+            this.goWorker.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Location = new System.Drawing.Point(373, 224);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(64, 17);
+            this.radioButton6.TabIndex = 18;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Floor 3";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton7.Location = new System.Drawing.Point(373, 187);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(64, 17);
+            this.radioButton7.TabIndex = 17;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Floor 2";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton8.Location = new System.Drawing.Point(373, 148);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(64, 17);
+            this.radioButton8.TabIndex = 16;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Floor 1";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(177, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(155, 16);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Please select a floor:";
+            // 
+            // resReturn1
+            // 
+            this.resReturn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resReturn1.Location = new System.Drawing.Point(426, 367);
+            this.resReturn1.Name = "resReturn1";
+            this.resReturn1.Size = new System.Drawing.Size(249, 43);
+            this.resReturn1.TabIndex = 8;
+            this.resReturn1.Text = "Return to New Residence";
+            this.resReturn1.UseVisualStyleBackColor = true;
+            this.resReturn1.Click += new System.EventHandler(this.resReturn1_Click);
+            // 
+            // resReturn2
+            // 
+            this.resReturn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resReturn2.Location = new System.Drawing.Point(431, 365);
+            this.resReturn2.Name = "resReturn2";
+            this.resReturn2.Size = new System.Drawing.Size(249, 43);
+            this.resReturn2.TabIndex = 16;
+            this.resReturn2.Text = "Return to New Residence";
+            this.resReturn2.UseVisualStyleBackColor = true;
+            this.resReturn2.Click += new System.EventHandler(this.resReturn2_Click);
+            // 
+            // resReturn3
+            // 
+            this.resReturn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resReturn3.Location = new System.Drawing.Point(435, 369);
+            this.resReturn3.Name = "resReturn3";
+            this.resReturn3.Size = new System.Drawing.Size(249, 43);
+            this.resReturn3.TabIndex = 19;
+            this.resReturn3.Text = "Return to New Residence";
+            this.resReturn3.UseVisualStyleBackColor = true;
+            this.resReturn3.Click += new System.EventHandler(this.resReturn3_Click);
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,6 +796,10 @@
             this.tabs.ResumeLayout(false);
             this.scholarshipTab.ResumeLayout(false);
             this.scholarshipTab.PerformLayout();
+            this.athleteTab.ResumeLayout(false);
+            this.athleteTab.PerformLayout();
+            this.workerTab.ResumeLayout(false);
+            this.workerTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,6 +841,28 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button return2;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button goScholarship;
+        private System.Windows.Forms.TextBox idScholarship;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button resReturn1;
+        private System.Windows.Forms.Button resReturn2;
+        private System.Windows.Forms.Button goAthlete;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label athletefee;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label idAthlete;
+        private System.Windows.Forms.Button resReturn3;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button goWorker;
+        private System.Windows.Forms.Label workerFee;
+        private System.Windows.Forms.TextBox idWorker;
+        private System.Windows.Forms.Label label10;
     }
 }
 

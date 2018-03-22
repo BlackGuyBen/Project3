@@ -90,15 +90,12 @@ namespace Project3
             }
             else if (athlete.Checked == true)
             {
-                tabs.TabPages.Add(athleteTab);
-                
+                tabs.TabPages.Add(athleteTab);      
             }
             else if (worker.Checked == true)
             {
-                tabs.TabPages.Add(workerTab);
-                
+                tabs.TabPages.Add(workerTab);     
             }
-
             tabs.SelectedIndex = 3;
         }
 
@@ -117,6 +114,48 @@ namespace Project3
             tabs.TabPages.Remove(scholarshipTab);
             tabs.TabPages.Remove(athleteTab);
             tabs.TabPages.Remove(workerTab);
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            goScholarship.Enabled = true;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            goScholarship.Enabled = true;
+        }
+
+        private void goScholarship_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+
+                MessageBox.Show("Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idScholarship.Text);
+            }
+            else if (radioButton3.Checked == true)
+            {
+                MessageBox.Show("Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idScholarship.Text);
+            }
+        }
+
+        //Return buttons for new resident adds
+        private void resReturn1_Click(object sender, EventArgs e)
+        {
+            tabs.TabPages.RemoveAt(tabs.SelectedIndex);
+            tabs.SelectedIndex = 2;
+        }
+
+        private void resReturn2_Click(object sender, EventArgs e)
+        {
+            tabs.TabPages.RemoveAt(tabs.SelectedIndex);
+            tabs.SelectedIndex = 2;
+        }
+
+        private void resReturn3_Click(object sender, EventArgs e)
+        {
+            tabs.TabPages.RemoveAt(tabs.SelectedIndex);
+            tabs.SelectedIndex = 2;
         }
     }
 }
