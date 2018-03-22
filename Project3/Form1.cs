@@ -15,87 +15,86 @@ namespace Project3
         public mainWindow()
         {
             InitializeComponent();
-            selectionTab.Hide();
-            newResTab.Hide();
-            resSearchTab.Hide();
-            scholarshipTab.Hide();
-            athleteTab.Hide();
-            workerTab.Hide();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "home")
-            {
-                textBox2.Enabled = true;
-            }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        ///called when the button is clicked
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-            selectionTab.Show();
+            tabs.TabPages.Remove(selectionTab);
+            tabs.TabPages.Remove(newResTab);
+            tabs.TabPages.Remove(resSearchTab);
+            tabs.TabPages.Remove(scholarshipTab);
+            tabs.TabPages.Remove(athleteTab);
+            tabs.TabPages.Remove(workerTab);
         }
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            selectionTab.Hide();
-            newResTab.Hide();
-            resSearchTab.Hide();
-            scholarshipTab.Hide();
-            athleteTab.Hide();
-            workerTab.Hide();
+            //InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            resSearchTab.Show();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
+            
+            if (username.Text == "home")
+            {
+                password.Enabled = true;
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (textBox2.Text == "1234")
+
+            if (password.Text == "1234")
             {
-                loginButton.Enabled = true;
+                login.Enabled = true;
             }
         }
 
+        ///called when the button is clicked
+        private void login_Click(object sender, EventArgs e)
+        {
+            tabs.TabPages.Add(selectionTab);
+            welcome.Visible = true;
+        }
+
+
+
+
+        //Clicking new Resident button or Find Resident button
         private void newRes_Click(object sender, EventArgs e)
         {
-            newResTab.Show();
+            tabs.TabPages.Add(newResTab);
+            //newResTab.Click = true;     
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (scholarship.Checked == true)
             {
-                scholarshipTab.Show();
-                //scholarshipTab();
+                tabs.TabPages.Add(scholarshipTab);
+
             }
-            if (athlete.Checked == true)
+            else if (athlete.Checked == true)
             {
-                athleteTab.Show();
+                tabs.TabPages.Add(athleteTab);
             }
             else if (worker.Checked == true)
             {
-                workerTab.Show();
+                tabs.TabPages.Add(workerTab);
             }
         }
+
+
+
+        private void findRes_Click(object sender, EventArgs e)
+        {
+            tabs.TabPages.Add(resSearchTab);
+        }
+
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            resSearchTab.Show();
+        }
+
+
     }
 }
