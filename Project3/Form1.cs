@@ -157,5 +157,22 @@ namespace Project3
             tabs.TabPages.RemoveAt(tabs.SelectedIndex);
             tabs.SelectedIndex = 2;
         }
+
+        private void goAthlete_Click(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked == true)
+            {
+
+                MessageBox.Show("Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idAthlete.Text);
+            }
+            else if (radioButton2.Checked == true)
+            {
+                MessageBox.Show("Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
+            }
+            else if (radioButton5.Checked == true)
+            {
+                MessageBox.Show("Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
+            }
+        }
     }
 }
