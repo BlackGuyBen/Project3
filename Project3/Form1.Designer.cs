@@ -52,7 +52,7 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.passwordText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.welcome = new System.Windows.Forms.Label();
             this.tabs = new System.Windows.Forms.TabControl();
@@ -76,6 +76,8 @@
             this.idAthlete = new System.Windows.Forms.TextBox();
             this.idAthleteLabel = new System.Windows.Forms.Label();
             this.workerTab = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.workedHrs = new System.Windows.Forms.TextBox();
             this.resReturn3 = new System.Windows.Forms.Button();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
@@ -86,6 +88,7 @@
             this.idWorker = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.idSearchGo = new System.Windows.Forms.Button();
             this.resSearchTab.SuspendLayout();
             this.newResTab.SuspendLayout();
             this.selectionTab.SuspendLayout();
@@ -130,6 +133,7 @@
             // resSearchTab
             // 
             this.resSearchTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("resSearchTab.BackgroundImage")));
+            this.resSearchTab.Controls.Add(this.idSearchGo);
             this.resSearchTab.Controls.Add(this.return2);
             this.resSearchTab.Controls.Add(this.idLabel);
             this.resSearchTab.Controls.Add(this.idText);
@@ -145,8 +149,8 @@
             // return2
             // 
             this.return2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.return2.Location = new System.Drawing.Point(648, 446);
-            this.return2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.return2.Location = new System.Drawing.Point(610, 443);
+            this.return2.Margin = new System.Windows.Forms.Padding(4);
             this.return2.Name = "return2";
             this.return2.Size = new System.Drawing.Size(261, 53);
             this.return2.TabIndex = 6;
@@ -167,8 +171,8 @@
             // 
             // idText
             // 
-            this.idText.Location = new System.Drawing.Point(443, 142);
-            this.idText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idText.Location = new System.Drawing.Point(425, 139);
+            this.idText.Margin = new System.Windows.Forms.Padding(4);
             this.idText.MaxLength = 6;
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(132, 22);
@@ -196,8 +200,8 @@
             // returnButton
             // 
             this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnButton.Location = new System.Drawing.Point(639, 455);
-            this.returnButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnButton.Location = new System.Drawing.Point(612, 451);
+            this.returnButton.Margin = new System.Windows.Forms.Padding(4);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(261, 53);
             this.returnButton.TabIndex = 5;
@@ -209,7 +213,7 @@
             // 
             this.goButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goButton.Location = new System.Drawing.Point(455, 214);
-            this.goButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goButton.Margin = new System.Windows.Forms.Padding(4);
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(100, 28);
             this.goButton.TabIndex = 4;
@@ -233,7 +237,7 @@
             this.athlete.AutoSize = true;
             this.athlete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.athlete.Location = new System.Drawing.Point(397, 110);
-            this.athlete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.athlete.Margin = new System.Windows.Forms.Padding(4);
             this.athlete.Name = "athlete";
             this.athlete.Size = new System.Drawing.Size(159, 24);
             this.athlete.TabIndex = 2;
@@ -245,7 +249,7 @@
             this.worker.AutoSize = true;
             this.worker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.worker.Location = new System.Drawing.Point(592, 110);
-            this.worker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.worker.Margin = new System.Windows.Forms.Padding(4);
             this.worker.Name = "worker";
             this.worker.Size = new System.Drawing.Size(160, 24);
             this.worker.TabIndex = 1;
@@ -257,7 +261,7 @@
             this.scholarship.AutoSize = true;
             this.scholarship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scholarship.Location = new System.Drawing.Point(152, 110);
-            this.scholarship.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scholarship.Margin = new System.Windows.Forms.Padding(4);
             this.scholarship.Name = "scholarship";
             this.scholarship.Size = new System.Drawing.Size(215, 24);
             this.scholarship.TabIndex = 0;
@@ -293,7 +297,7 @@
             // findRes
             // 
             this.findRes.Location = new System.Drawing.Point(541, 169);
-            this.findRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.findRes.Margin = new System.Windows.Forms.Padding(4);
             this.findRes.Name = "findRes";
             this.findRes.Size = new System.Drawing.Size(127, 28);
             this.findRes.TabIndex = 1;
@@ -304,7 +308,7 @@
             // newRes
             // 
             this.newRes.Location = new System.Drawing.Point(255, 169);
-            this.newRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newRes.Margin = new System.Windows.Forms.Padding(4);
             this.newRes.Name = "newRes";
             this.newRes.Size = new System.Drawing.Size(139, 28);
             this.newRes.TabIndex = 0;
@@ -319,7 +323,7 @@
             this.menuTab.Controls.Add(this.titleLabel);
             this.menuTab.Controls.Add(this.password);
             this.menuTab.Controls.Add(this.username);
-            this.menuTab.Controls.Add(this.label3);
+            this.menuTab.Controls.Add(this.passwordText);
             this.menuTab.Controls.Add(this.label2);
             this.menuTab.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuTab.Location = new System.Drawing.Point(4, 25);
@@ -335,7 +339,7 @@
             // 
             this.login.Enabled = false;
             this.login.Location = new System.Drawing.Point(493, 318);
-            this.login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.login.Margin = new System.Windows.Forms.Padding(4);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(100, 28);
             this.login.TabIndex = 5;
@@ -363,7 +367,6 @@
             this.password.Size = new System.Drawing.Size(100, 26);
             this.password.TabIndex = 0;
             this.password.UseSystemPasswordChar = true;
-            this.password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // username
             // 
@@ -374,14 +377,14 @@
             this.username.TabIndex = 0;
             this.username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label3
+            // passwordText
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(381, 250);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password:";
+            this.passwordText.AutoSize = true;
+            this.passwordText.Location = new System.Drawing.Point(381, 250);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(85, 19);
+            this.passwordText.TabIndex = 2;
+            this.passwordText.Text = "Password:";
             // 
             // label2
             // 
@@ -434,9 +437,9 @@
             this.scholarshipTab.Controls.Add(this.label7);
             this.scholarshipTab.Controls.Add(this.label6);
             this.scholarshipTab.Location = new System.Drawing.Point(4, 25);
-            this.scholarshipTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scholarshipTab.Margin = new System.Windows.Forms.Padding(4);
             this.scholarshipTab.Name = "scholarshipTab";
-            this.scholarshipTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scholarshipTab.Padding = new System.Windows.Forms.Padding(4);
             this.scholarshipTab.Size = new System.Drawing.Size(944, 533);
             this.scholarshipTab.TabIndex = 4;
             this.scholarshipTab.Text = "New Scholarship";
@@ -446,7 +449,7 @@
             // 
             this.resReturn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resReturn1.Location = new System.Drawing.Point(568, 452);
-            this.resReturn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resReturn1.Margin = new System.Windows.Forms.Padding(4);
             this.resReturn1.Name = "resReturn1";
             this.resReturn1.Size = new System.Drawing.Size(332, 53);
             this.resReturn1.TabIndex = 8;
@@ -458,7 +461,7 @@
             // 
             this.idScholarship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idScholarship.Location = new System.Drawing.Point(429, 60);
-            this.idScholarship.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idScholarship.Margin = new System.Windows.Forms.Padding(4);
             this.idScholarship.MaxLength = 8;
             this.idScholarship.Name = "idScholarship";
             this.idScholarship.Size = new System.Drawing.Size(132, 26);
@@ -480,7 +483,7 @@
             this.goScholarship.Enabled = false;
             this.goScholarship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goScholarship.Location = new System.Drawing.Point(393, 288);
-            this.goScholarship.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goScholarship.Margin = new System.Windows.Forms.Padding(4);
             this.goScholarship.Name = "goScholarship";
             this.goScholarship.Size = new System.Drawing.Size(100, 28);
             this.goScholarship.TabIndex = 5;
@@ -493,7 +496,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(429, 194);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(80, 21);
             this.radioButton3.TabIndex = 4;
@@ -507,7 +510,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(429, 146);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(80, 21);
             this.radioButton1.TabIndex = 2;
@@ -551,9 +554,9 @@
             this.athleteTab.Controls.Add(this.idAthlete);
             this.athleteTab.Controls.Add(this.idAthleteLabel);
             this.athleteTab.Location = new System.Drawing.Point(4, 25);
-            this.athleteTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.athleteTab.Margin = new System.Windows.Forms.Padding(4);
             this.athleteTab.Name = "athleteTab";
-            this.athleteTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.athleteTab.Padding = new System.Windows.Forms.Padding(4);
             this.athleteTab.Size = new System.Drawing.Size(944, 533);
             this.athleteTab.TabIndex = 5;
             this.athleteTab.Text = "New Student Athlete";
@@ -563,7 +566,7 @@
             // 
             this.resReturn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resReturn2.Location = new System.Drawing.Point(575, 449);
-            this.resReturn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resReturn2.Margin = new System.Windows.Forms.Padding(4);
             this.resReturn2.Name = "resReturn2";
             this.resReturn2.Size = new System.Drawing.Size(332, 53);
             this.resReturn2.TabIndex = 16;
@@ -575,7 +578,7 @@
             // 
             this.goAthlete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goAthlete.Location = new System.Drawing.Point(421, 364);
-            this.goAthlete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goAthlete.Margin = new System.Windows.Forms.Padding(4);
             this.goAthlete.Name = "goAthlete";
             this.goAthlete.Size = new System.Drawing.Size(100, 28);
             this.goAthlete.TabIndex = 15;
@@ -588,7 +591,7 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton5.Location = new System.Drawing.Point(481, 289);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(80, 21);
             this.radioButton5.TabIndex = 14;
@@ -601,7 +604,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(481, 244);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(80, 21);
             this.radioButton2.TabIndex = 13;
@@ -614,7 +617,7 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(481, 196);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(80, 21);
             this.radioButton4.TabIndex = 12;
@@ -648,7 +651,7 @@
             // 
             this.idAthlete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idAthlete.Location = new System.Drawing.Point(481, 92);
-            this.idAthlete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idAthlete.Margin = new System.Windows.Forms.Padding(4);
             this.idAthlete.MaxLength = 8;
             this.idAthlete.Name = "idAthlete";
             this.idAthlete.Size = new System.Drawing.Size(132, 26);
@@ -668,6 +671,8 @@
             // workerTab
             // 
             this.workerTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("workerTab.BackgroundImage")));
+            this.workerTab.Controls.Add(this.label12);
+            this.workerTab.Controls.Add(this.workedHrs);
             this.workerTab.Controls.Add(this.resReturn3);
             this.workerTab.Controls.Add(this.radioButton6);
             this.workerTab.Controls.Add(this.radioButton7);
@@ -678,19 +683,37 @@
             this.workerTab.Controls.Add(this.idWorker);
             this.workerTab.Controls.Add(this.label10);
             this.workerTab.Location = new System.Drawing.Point(4, 25);
-            this.workerTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.workerTab.Margin = new System.Windows.Forms.Padding(4);
             this.workerTab.Name = "workerTab";
-            this.workerTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.workerTab.Padding = new System.Windows.Forms.Padding(4);
             this.workerTab.Size = new System.Drawing.Size(944, 533);
             this.workerTab.TabIndex = 6;
             this.workerTab.Text = "New Student Worker";
             this.workerTab.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(236, 159);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(206, 20);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Monthly Hours Worked:";
+            // 
+            // workedHrs
+            // 
+            this.workedHrs.Location = new System.Drawing.Point(464, 157);
+            this.workedHrs.Name = "workedHrs";
+            this.workedHrs.Size = new System.Drawing.Size(100, 22);
+            this.workedHrs.TabIndex = 20;
+            this.workedHrs.TextChanged += new System.EventHandler(this.workedHrs_TextChanged);
+            // 
             // resReturn3
             // 
             this.resReturn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resReturn3.Location = new System.Drawing.Point(580, 454);
-            this.resReturn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resReturn3.Location = new System.Drawing.Point(541, 462);
+            this.resReturn3.Margin = new System.Windows.Forms.Padding(4);
             this.resReturn3.Name = "resReturn3";
             this.resReturn3.Size = new System.Drawing.Size(332, 53);
             this.resReturn3.TabIndex = 19;
@@ -702,8 +725,8 @@
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(497, 276);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton6.Location = new System.Drawing.Point(497, 324);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(80, 21);
             this.radioButton6.TabIndex = 18;
@@ -715,8 +738,8 @@
             // 
             this.radioButton7.AutoSize = true;
             this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(497, 230);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton7.Location = new System.Drawing.Point(497, 278);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(80, 21);
             this.radioButton7.TabIndex = 17;
@@ -728,8 +751,8 @@
             // 
             this.radioButton8.AutoSize = true;
             this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(497, 182);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton8.Location = new System.Drawing.Point(497, 230);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(80, 21);
             this.radioButton8.TabIndex = 16;
@@ -741,7 +764,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(236, 182);
+            this.label11.Location = new System.Drawing.Point(236, 230);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(189, 20);
@@ -751,13 +774,14 @@
             // goWorker
             // 
             this.goWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goWorker.Location = new System.Drawing.Point(412, 343);
-            this.goWorker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goWorker.Location = new System.Drawing.Point(418, 414);
+            this.goWorker.Margin = new System.Windows.Forms.Padding(4);
             this.goWorker.Name = "goWorker";
             this.goWorker.Size = new System.Drawing.Size(100, 28);
             this.goWorker.TabIndex = 14;
             this.goWorker.Text = "Go";
             this.goWorker.UseVisualStyleBackColor = true;
+            this.goWorker.Click += new System.EventHandler(this.goWorker_Click);
             // 
             // workerFee
             // 
@@ -766,15 +790,15 @@
             this.workerFee.Location = new System.Drawing.Point(236, 122);
             this.workerFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.workerFee.Name = "workerFee";
-            this.workerFee.Size = new System.Drawing.Size(254, 20);
+            this.workerFee.Size = new System.Drawing.Size(294, 20);
             this.workerFee.TabIndex = 13;
-            this.workerFee.Text = "Monthly Boarding Fee: $1245";
+            this.workerFee.Text = "Max Monthly Boarding Fee: $1245";
             // 
             // idWorker
             // 
             this.idWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idWorker.Location = new System.Drawing.Point(497, 76);
-            this.idWorker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idWorker.Location = new System.Drawing.Point(464, 77);
+            this.idWorker.Margin = new System.Windows.Forms.Padding(4);
             this.idWorker.MaxLength = 8;
             this.idWorker.Name = "idWorker";
             this.idWorker.Size = new System.Drawing.Size(132, 26);
@@ -795,7 +819,7 @@
             // 
             this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.Location = new System.Drawing.Point(64, 543);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(100, 28);
             this.logoutButton.TabIndex = 7;
@@ -803,6 +827,17 @@
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Visible = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // idSearchGo
+            // 
+            this.idSearchGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idSearchGo.Location = new System.Drawing.Point(443, 227);
+            this.idSearchGo.Name = "idSearchGo";
+            this.idSearchGo.Size = new System.Drawing.Size(103, 52);
+            this.idSearchGo.TabIndex = 7;
+            this.idSearchGo.Text = "Find Student";
+            this.idSearchGo.UseVisualStyleBackColor = true;
+            this.idSearchGo.Click += new System.EventHandler(this.idSearchGo_Click);
             // 
             // mainWindow
             // 
@@ -861,7 +896,7 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label passwordText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Button goButton;
@@ -900,6 +935,9 @@
         private System.Windows.Forms.Label workerFee;
         private System.Windows.Forms.TextBox idWorker;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox workedHrs;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button idSearchGo;
     }
 }
 

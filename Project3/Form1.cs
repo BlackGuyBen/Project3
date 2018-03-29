@@ -31,20 +31,15 @@ namespace Project3
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
-            if (username.Text == "home")
-            {
-                password.Enabled = true;
-            }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-            if (password.Text == "1234")
+            if (username.Text == "home" && password.Text == "1234")
             {
                 login.Enabled = true;
             }
+            username.Clear();
+            password.Clear();
         }
+
+
 
         /// <summary>
         /// called when the button is clicked
@@ -126,19 +121,6 @@ namespace Project3
             goScholarship.Enabled = true;
         }
 
-        private void goScholarship_Click(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked == true)
-            {
-
-                MessageBox.Show("Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idScholarship.Text);
-            }
-            else if (radioButton3.Checked == true)
-            {
-                MessageBox.Show("Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idScholarship.Text);
-            }
-        }
-
         //Return buttons for new resident adds
         private void resReturn1_Click(object sender, EventArgs e)
         {
@@ -158,21 +140,72 @@ namespace Project3
             tabs.SelectedIndex = 2;
         }
 
+        //End of return boxes
+
+        //Go button events
         private void goAthlete_Click(object sender, EventArgs e)
         {
             if (radioButton4.Checked == true)
             {
 
-                MessageBox.Show("Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idAthlete.Text);
+                MessageBox.Show($"Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idAthlete.Text);
             }
             else if (radioButton2.Checked == true)
             {
-                MessageBox.Show("Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
+                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
             }
             else if (radioButton5.Checked == true)
             {
-                MessageBox.Show("Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
+                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
             }
         }
+
+        private void goScholarship_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+
+                MessageBox.Show($"Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idScholarship.Text);
+            }
+            else if (radioButton3.Checked == true)
+            {
+                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm: 123 \n Monthly Fee: $100 \n", idScholarship.Text);
+            }
+        }
+
+        private void goWorker_Click(object sender, EventArgs e)
+        {
+            
+
+            if (radioButton8.Checked == true)
+            {
+
+                MessageBox.Show($"Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: {1} \n", idAthlete.Text);
+            }
+            else if (radioButton7.Checked == true)
+            {
+                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: {1} \n", idAthlete.Text,);
+            }
+            else if (radioButton6.Checked == true)
+            {
+                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: {1} \n", idAthlete.Text);
+            }
+
+            
+        }
+
+        private void workedHrs_TextChanged(object sender, EventArgs e)
+        {
+            int monthlyFee;
+
+            monthlyFee = 1245 - (14 * Convert.ToInt32(workedHrs.Text));
+        }
+        //End of Go click on all three new residences.
+
+        private void idSearchGo_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
