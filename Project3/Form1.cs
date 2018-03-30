@@ -30,13 +30,12 @@ namespace Project3
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
             if (username.Text == "home" && password.Text == "1234")
             {
                 login.Enabled = true;
             }
-            username.Clear();
-            password.Clear();
+
+
         }
 
 
@@ -47,10 +46,14 @@ namespace Project3
         /// </summary>
         private void login_Click(object sender, EventArgs e)
         {
+
+
             tabs.TabPages.Add(selectionTab);
             tabs.SelectedIndex = 1;
             welcome.Visible = true;
             logoutButton.Visible = true;
+            username.Clear();
+            password.Clear();
         }
         /// <summary>
         /// return button goes to the selection tab from new resident
@@ -184,7 +187,7 @@ namespace Project3
             }
             else if (radioButton7.Checked == true)
             {
-                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: {1} \n", idAthlete.Text,);
+                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: {1} \n", idAthlete.Text);
             }
             else if (radioButton6.Checked == true)
             {
