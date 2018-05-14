@@ -211,24 +211,30 @@ namespace Project3
 
         private void idSearchGo_Click(object sender, EventArgs e)
         {
-            string IDNum = idText.Text;
+            try
+            {
+                string IDNum = idText.Text;
 
-            var ResList = File.ReadLines("ResList.csv");
+                var ResList = File.ReadLines("ResList.csv");
 
-            foreach(var line in ResList)
-                if (IDNum.Trim() == line.ToString())
-                {
-                    MessageBox.Show(line.ToString());
-                }
-                else
-                {
-                    MessageBox.Show("No matches found!");
-                }
+                foreach (var line in ResList)
+                    if (IDNum == line.ToString())
+                    {
+                        MessageBox.Show(line.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Matches Found!");
+                    }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+                
+            }
+
+
         }
 
-        private void password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
