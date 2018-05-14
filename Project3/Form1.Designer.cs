@@ -141,9 +141,9 @@
             this.resSearchTab.Controls.Add(this.idLabel);
             this.resSearchTab.Controls.Add(this.idText);
             this.resSearchTab.Location = new System.Drawing.Point(4, 22);
-            this.resSearchTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resSearchTab.Margin = new System.Windows.Forms.Padding(2);
             this.resSearchTab.Name = "resSearchTab";
-            this.resSearchTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resSearchTab.Padding = new System.Windows.Forms.Padding(2);
             this.resSearchTab.Size = new System.Drawing.Size(706, 431);
             this.resSearchTab.TabIndex = 3;
             this.resSearchTab.Text = "Residence Search";
@@ -153,7 +153,7 @@
             // 
             this.idSearchGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idSearchGo.Location = new System.Drawing.Point(332, 184);
-            this.idSearchGo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idSearchGo.Margin = new System.Windows.Forms.Padding(2);
             this.idSearchGo.Name = "idSearchGo";
             this.idSearchGo.Size = new System.Drawing.Size(77, 42);
             this.idSearchGo.TabIndex = 7;
@@ -201,9 +201,9 @@
             this.newResTab.Controls.Add(this.worker);
             this.newResTab.Controls.Add(this.scholarship);
             this.newResTab.Location = new System.Drawing.Point(4, 22);
-            this.newResTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newResTab.Margin = new System.Windows.Forms.Padding(2);
             this.newResTab.Name = "newResTab";
-            this.newResTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newResTab.Padding = new System.Windows.Forms.Padding(2);
             this.newResTab.Size = new System.Drawing.Size(706, 431);
             this.newResTab.TabIndex = 2;
             this.newResTab.Text = "New Residence";
@@ -281,9 +281,9 @@
             this.selectionTab.Controls.Add(this.findRes);
             this.selectionTab.Controls.Add(this.newRes);
             this.selectionTab.Location = new System.Drawing.Point(4, 22);
-            this.selectionTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectionTab.Margin = new System.Windows.Forms.Padding(2);
             this.selectionTab.Name = "selectionTab";
-            this.selectionTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectionTab.Padding = new System.Windows.Forms.Padding(2);
             this.selectionTab.Size = new System.Drawing.Size(706, 431);
             this.selectionTab.TabIndex = 1;
             this.selectionTab.Text = "Selection";
@@ -332,9 +332,9 @@
             this.menuTab.Controls.Add(this.label2);
             this.menuTab.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuTab.Location = new System.Drawing.Point(4, 22);
-            this.menuTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menuTab.Margin = new System.Windows.Forms.Padding(2);
             this.menuTab.Name = "menuTab";
-            this.menuTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menuTab.Padding = new System.Windows.Forms.Padding(2);
             this.menuTab.Size = new System.Drawing.Size(706, 431);
             this.menuTab.TabIndex = 0;
             this.menuTab.Text = "Main Menu";
@@ -342,7 +342,6 @@
             // 
             // login
             // 
-            this.login.Enabled = false;
             this.login.Location = new System.Drawing.Point(370, 258);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(75, 23);
@@ -364,20 +363,20 @@
             // password
             // 
             this.password.Location = new System.Drawing.Point(370, 202);
-            this.password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(76, 23);
             this.password.TabIndex = 0;
             this.password.UseSystemPasswordChar = true;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // username
             // 
             this.username.Location = new System.Drawing.Point(370, 169);
-            this.username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(76, 23);
             this.username.TabIndex = 0;
-            this.username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // passwordText
             // 
@@ -421,7 +420,7 @@
             this.tabs.Controls.Add(this.athleteTab);
             this.tabs.Controls.Add(this.workerTab);
             this.tabs.Location = new System.Drawing.Point(192, 11);
-            this.tabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabs.Margin = new System.Windows.Forms.Padding(2);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
             this.tabs.Size = new System.Drawing.Size(714, 457);
@@ -441,7 +440,7 @@
             this.scholarshipTab.Controls.Add(this.label6);
             this.scholarshipTab.Location = new System.Drawing.Point(4, 22);
             this.scholarshipTab.Name = "scholarshipTab";
-            this.scholarshipTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.scholarshipTab.Padding = new System.Windows.Forms.Padding(3);
             this.scholarshipTab.Size = new System.Drawing.Size(706, 431);
             this.scholarshipTab.TabIndex = 4;
             this.scholarshipTab.Text = "New Scholarship";
@@ -549,7 +548,7 @@
             this.athleteTab.Controls.Add(this.idAthleteLabel);
             this.athleteTab.Location = new System.Drawing.Point(4, 22);
             this.athleteTab.Name = "athleteTab";
-            this.athleteTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.athleteTab.Padding = new System.Windows.Forms.Padding(3);
             this.athleteTab.Size = new System.Drawing.Size(706, 431);
             this.athleteTab.TabIndex = 5;
             this.athleteTab.Text = "New Student Athlete";
@@ -668,7 +667,7 @@
             this.workerTab.Controls.Add(this.label10);
             this.workerTab.Location = new System.Drawing.Point(4, 22);
             this.workerTab.Name = "workerTab";
-            this.workerTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.workerTab.Padding = new System.Windows.Forms.Padding(3);
             this.workerTab.Size = new System.Drawing.Size(706, 431);
             this.workerTab.TabIndex = 6;
             this.workerTab.Text = "New Student Worker";
@@ -687,12 +686,11 @@
             // 
             // workedHrs
             // 
-            this.workedHrs.Location = new System.Drawing.Point(348, 128);
-            this.workedHrs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.workedHrs.Location = new System.Drawing.Point(372, 129);
+            this.workedHrs.Margin = new System.Windows.Forms.Padding(2);
             this.workedHrs.Name = "workedHrs";
             this.workedHrs.Size = new System.Drawing.Size(76, 20);
             this.workedHrs.TabIndex = 20;
-            this.workedHrs.TextChanged += new System.EventHandler(this.workedHrs_TextChanged);
             // 
             // resReturn3
             // 
@@ -816,7 +814,7 @@
             this.Controls.Add(this.dunLab2);
             this.Controls.Add(this.dunLabel1);
             this.Controls.Add(this.tabs);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dunwoody Residence Hall";

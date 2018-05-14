@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,21 +22,13 @@ namespace Project3
             tabs.TabPages.Remove(scholarshipTab);
             tabs.TabPages.Remove(athleteTab);
             tabs.TabPages.Remove(workerTab);
+
+
         }
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
             //InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (username.Text == "home" && password.Text == "1234")
-            {
-                login.Enabled = true;
-            }
-
-
         }
 
 
@@ -46,14 +39,21 @@ namespace Project3
         /// </summary>
         private void login_Click(object sender, EventArgs e)
         {
+            if (username.Text == "home" && password.Text == "1234")
+            {
+                tabs.TabPages.Add(selectionTab);
+                tabs.SelectedIndex = 1;
+                welcome.Visible = true;
+                logoutButton.Visible = true;
+                username.Clear();
+                password.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Please enter the correct credentials");
+            }
 
 
-            tabs.TabPages.Add(selectionTab);
-            tabs.SelectedIndex = 1;
-            welcome.Visible = true;
-            logoutButton.Visible = true;
-            username.Clear();
-            password.Clear();
         }
         /// <summary>
         /// return button goes to the selection tab from new resident
@@ -148,67 +148,87 @@ namespace Project3
         //Go button events
         private void goAthlete_Click(object sender, EventArgs e)
         {
+            Random num = new Random();
+            
             if (radioButton4.Checked == true)
             {
-
-                MessageBox.Show($"Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idAthlete.Text);
+                int x = num.Next(400, 441);
+                MessageBox.Show($"Student ID:{idAthlete.Text} \nFloor 7 Rm: {x} \n Monthly Fee: $1200 \n");
             }
             else if (radioButton2.Checked == true)
             {
-                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
+                int x = num.Next(500, 541);
+                MessageBox.Show($"Student ID: {idAthlete.Text} \n Floor 8 Rm:{x} \n Monthly Fee: $1200 \n");
             }
             else if (radioButton5.Checked == true)
             {
-                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: $100 \n", idAthlete.Text);
+                int x = num.Next(600, 641);
+                MessageBox.Show($"Student ID: {idAthlete.Text} \n Floor 8 Rm:{x} \n Monthly Fee: $1200 \n");
             }
         }
 
         private void goScholarship_Click(object sender, EventArgs e)
         {
+            Random num = new Random();
+
             if (radioButton1.Checked == true)
             {
-
-                MessageBox.Show($"Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: $100 \n", idScholarship.Text);
+                int x = num.Next(700, 741);
+                MessageBox.Show($"Student ID:{idScholarship.Text} \nFloor 7 Rm: {x} \n Monthly Fee: $100 \n");
             }
             else if (radioButton3.Checked == true)
             {
-                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm: 123 \n Monthly Fee: $100 \n", idScholarship.Text);
+                int x = num.Next(800, 841);
+                MessageBox.Show($"Student ID: {idScholarship.Text} \n Floor 8 Rm: {x} \n Monthly Fee: $100 \n");
             }
         }
 
         private void goWorker_Click(object sender, EventArgs e)
         {
-            
+            Random num = new Random();
+            int monthlyFee = 1245 - (14 * Convert.ToInt32(workedHrs.Text));
 
             if (radioButton8.Checked == true)
             {
-
-                MessageBox.Show($"Student ID:{0} \nFloor 7 Rm: 123 \n Monthly Fee: {1} \n", idAthlete.Text);
+                int x = num.Next(100, 141);
+                
+                MessageBox.Show($"Student ID:{idWorker.Text} \nFloor 7 Rm: {x} \n Monthly Fee: ${monthlyFee} \n");
             }
             else if (radioButton7.Checked == true)
             {
-                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: {1} \n", idAthlete.Text);
+                int x = num.Next(200, 241);
+                MessageBox.Show($"Student ID: {idWorker.Text} \n Floor 8 Rm:{x} \n Monthly Fee: ${monthlyFee} \n");
             }
             else if (radioButton6.Checked == true)
             {
-                MessageBox.Show($"Student ID: {0} \n Floor 8 Rm:123 \n Monthly Fee: {1} \n", idAthlete.Text);
+                int x = num.Next(300, 341);
+                MessageBox.Show($"Student ID: {idWorker.Text} \n Floor 8 Rm:{x} \n Monthly Fee: ${monthlyFee} \n");
             }
 
             
-        }
-
-        private void workedHrs_TextChanged(object sender, EventArgs e)
-        {
-            int monthlyFee;
-
-            monthlyFee = 1245 - (14 * Convert.ToInt32(workedHrs.Text));
         }
         //End of Go click on all three new residences.
 
         private void idSearchGo_Click(object sender, EventArgs e)
         {
+            string IDNum = idText.Text;
+
+            var ResList = File.ReadLines("ResList.csv");
+
+            foreach(var line in ResList)
+                if (IDNum.Trim() == line.ToString())
+                {
+                    MessageBox.Show(line.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("No matches found!");
+                }
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
 
         }
-        
     }
 }
